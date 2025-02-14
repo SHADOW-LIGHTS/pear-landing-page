@@ -21,18 +21,14 @@ export default function AuthButton({
   return (
     <div className="flex items-center space-x-4">
       {!user ? (
-        <div className="m-0 inline-flex rounded-lg border border-gray-300 p-0 dark:border-gray-100">
+        <div className="flex gap-2">
           <Link href="/signin">
-            <Button variant="ghost" className="h-8 rounded-r-none px-3">
+            <Button className="h-8 rounded-xl border border-[#ffffff]/20 bg-transparent px-3">
               Sign in
             </Button>
           </Link>
-          <div className="w-[1px] self-stretch bg-gray-300 dark:bg-gray-100" />
           <Link href="/signup">
-            <Button
-              variant="ghost"
-              className="h-8 rounded-l-none border-0 px-3"
-            >
+            <Button className="h-8 rounded-xl border border-[#ffffff]/20 bg-transparent px-3">
               Sign up
             </Button>
           </Link>

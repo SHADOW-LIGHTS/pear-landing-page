@@ -24,7 +24,9 @@ export default function DownloadButton({ user }: { user: User | null }) {
       <Button
         variant={user ? "outline" : "default"}
         size={`${user ? "icon" : "default"}`}
-        className={user ? "h-9 px-3" : "h-8 rounded-lg px-3"}
+        className={
+          user ? "h-8 px-3" : "h-8 rounded-xl bg-white-50 px-3 text-black"
+        }
         onClick={handleClick}
       >
         {user ? <ArrowDownToLine /> : "Download"}

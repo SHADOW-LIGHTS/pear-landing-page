@@ -90,65 +90,62 @@ export default async function Header() {
   };
 
   return (
-    <header className="fixed left-0 right-0 top-0 z-50 p-4 transition-all duration-300 ease-in-out">
-      <div className="mx-auto max-w-[1070px]">
-        <nav
-          className="rounded-2xl border-[1.5px] border-gray-200 bg-background px-2 transition-all duration-300 ease-in-out dark:border-gray-50"
-          aria-label="Main navigation"
-        >
-          <div className="flex h-12 items-center justify-between">
-            <div className="flex items-center">
-              <Link
-                href="/"
-                className="flex flex-shrink-0 items-center"
-                aria-label="PearAI Home"
-              >
-                <PearHeroLogo className="mb-1 h-7" />
-                <div className="ml-1 text-2xl font-bold">PearAI</div>
-              </Link>
-              <nav className="ml-4 hidden md:block" aria-label="Main menu">
-                <NavigationMenu>
-                  <NavigationMenuList className="text-black/60 dark:text-gray-500">
-                    <DropdownNavItem trigger="Resources">
-                      <ul className="grid w-[400px] gap-3 bg-background p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                        <ListItem href="/about" title="About">
-                          Learn more about PearAI
-                        </ListItem>
-                        <ListItem href="/blog" title="Blog">
-                          Read insights on PearAI&apos;s development by our
-                          contributors
-                        </ListItem>
-                        <ListItem href="/faq" title="FAQ">
-                          Frequently asked questions about PearAI
-                        </ListItem>
-                        <ListItem href="/changelog" title="Changelog">
-                          See what&apos;s new in PearAI
-                        </ListItem>
-                      </ul>
-                    </DropdownNavItem>
-                    <NavItem href="/pricing">Pricing</NavItem>
-                    <NavItem href="/docs">Documentation</NavItem>
-                    <NavItem
-                      href="https://github.com/trypear/pearai-master"
-                      target="_blank"
-                    >
-                      GitHub
-                    </NavItem>
-                  </NavigationMenuList>
-                </NavigationMenu>
-              </nav>
-            </div>
-            <div className="hidden items-center space-x-4 lg:flex">
-              <DownloadButton user={user} />
-              <AuthButton user={user} handleSignOut={handleSignOut} />
-              <DarkModeToggle />
-            </div>
-            <div className="lg:hidden">
-              <MobileMenu user={user} handleSignOut={handleSignOut} />
-            </div>
+    <header className="fixed left-0 right-0 top-0 z-50 bg-[#202428] bg-gradient-to-l from-transparent via-black/[0.25] to-black/35 transition-all duration-300 ease-in-out">
+      <nav
+        className="p-4 transition-all duration-300 ease-in-out"
+        aria-label="Main navigation"
+      >
+        <div className="flex items-center justify-between">
+          <div className="flex items-center">
+            <Link
+              href="/"
+              className="flex flex-shrink-0 items-center"
+              aria-label="PearAI Home"
+            >
+              <PearHeroLogo className="mb-1 h-7" />
+              <div className="ml-1 text-2xl font-bold">PearAI</div>
+            </Link>
+            <nav className="ml-4 hidden md:block" aria-label="Main menu">
+              <NavigationMenu>
+                <NavigationMenuList className="text-black/60 dark:text-gray-500">
+                  <DropdownNavItem trigger="Resources">
+                    <ul className="grid w-[400px] gap-3 bg-background p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                      <ListItem href="/about" title="About">
+                        Learn more about PearAI
+                      </ListItem>
+                      <ListItem href="/blog" title="Blog">
+                        Read insights on PearAI&apos;s development by our
+                        contributors
+                      </ListItem>
+                      <ListItem href="/faq" title="FAQ">
+                        Frequently asked questions about PearAI
+                      </ListItem>
+                      <ListItem href="/changelog" title="Changelog">
+                        See what&apos;s new in PearAI
+                      </ListItem>
+                    </ul>
+                  </DropdownNavItem>
+                  <NavItem href="/pricing">Pricing</NavItem>
+                  <NavItem href="/docs">Documentation</NavItem>
+                  <NavItem
+                    href="https://github.com/trypear/pearai-master"
+                    target="_blank"
+                  >
+                    GitHub
+                  </NavItem>
+                </NavigationMenuList>
+              </NavigationMenu>
+            </nav>
           </div>
-        </nav>
-      </div>
+          <div className="hidden items-center space-x-2 lg:flex">
+            <AuthButton user={user} handleSignOut={handleSignOut} />
+            <DownloadButton user={user} />
+          </div>
+          <div className="lg:hidden">
+            <MobileMenu user={user} handleSignOut={handleSignOut} />
+          </div>
+        </div>
+      </nav>
     </header>
   );
 }
