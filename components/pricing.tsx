@@ -47,20 +47,20 @@ type VersionInfo = {
 
 export const platformVersions: Record<string, VersionInfo> = {
   Windows: {
-    version: "v1.7.1",
-    releaseDate: "Jan 27, 2025",
+    version: "v1.8.0",
+    releaseDate: "Feb 12, 2025",
   },
   "Mac (M chip)": {
-    version: "v1.7.1",
-    releaseDate: "Jan 27, 2025",
+    version: "v1.8.0",
+    releaseDate: "Feb 12, 2025",
   },
   "Mac (Intel)": {
-    version: "v1.5.4",
-    releaseDate: "Dec 1, 2024",
+    version: "v1.8.0",
+    releaseDate: "Feb 12, 2025",
   },
   Linux: {
-    version: "v1.7.0",
-    releaseDate: "23 Jan, 2025",
+    version: "v1.8.0",
+    releaseDate: "Feb 12, 2025",
   },
 };
 
@@ -261,11 +261,19 @@ const PricingTier: React.FC<ExtendedPricingTierProps> = ({
                           ([platform, info]) => (
                             <Fragment key={platform}>
                               <span className="font-medium">{platform}:</span>
-                              <div className="flex items-center gap-1">
-                                <div>{info.version}</div>
-                                <div className="text-xs text-gray-400">
-                                  ({info.releaseDate})
+                              <div className="flex flex-col">
+                                <div className="flex items-center gap-1">
+                                  <div>{info.version}</div>
+                                  <div className="text-xs text-gray-400">
+                                    ({info.releaseDate})
+                                  </div>
                                 </div>
+                                {platform === "Linux" && (
+                                  <div className="text-xs text-gray-400">
+                                    *Packaged and released by <br /> the open
+                                    source community
+                                  </div>
+                                )}
                               </div>
                             </Fragment>
                           ),
