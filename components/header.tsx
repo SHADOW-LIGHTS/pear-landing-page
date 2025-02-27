@@ -1,6 +1,6 @@
 import { ReactNode, forwardRef, ComponentPropsWithoutRef } from "react";
 import Link from "next/link";
-import PearHeroLogo from "./ui/PearHeroLogo.svg";
+import PearWhite from "./ui/PearWhite.svg";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -11,7 +11,6 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
-import DarkModeToggle from "./ui/darkmode-toggle";
 import AuthButton from "./ui/authbutton";
 import MobileMenu from "./ui/mobile-menu";
 import { redirect } from "next/navigation";
@@ -102,8 +101,8 @@ export default async function Header() {
               className="flex flex-shrink-0 items-center"
               aria-label="PearAI Home"
             >
-              <PearHeroLogo className="mb-1 h-7" />
-              <div className="ml-1 text-2xl font-bold">PearAI</div>
+              <PearWhite className="mb-1 h-6" />
+              <div className="ml-1 text-xl font-semibold">PearAI</div>
             </Link>
             <nav className="ml-4 hidden md:block" aria-label="Main menu">
               <NavigationMenu>

@@ -23,12 +23,12 @@ export default function AuthButton({
       {!user ? (
         <div className="flex gap-2">
           <Link href="/signin">
-            <Button className="h-8 rounded-xl border border-[#ffffff]/20 bg-transparent px-3">
+            <Button className="text-white h-8 rounded-xl border border-[#ffffff]/20 bg-transparent px-3 font-normal">
               Sign in
             </Button>
           </Link>
           <Link href="/signup">
-            <Button className="h-8 rounded-xl border border-[#ffffff]/20 bg-transparent px-3">
+            <Button className="text-white h-8 rounded-xl border border-[#ffffff]/20 bg-transparent px-3 font-normal">
               Sign up
             </Button>
           </Link>

@@ -1,14 +1,14 @@
 export default function AIModelsList() {
   return (
-    <div className="items-center justify-center px-6 pb-6 lg:flex">
-      <div className="mx-auto w-full max-w-3xl rounded-xl border-2 border-gray-200 p-5 dark:border-gray-50 lg:max-w-[1049px]">
+    <div className="items-center justify-center px-5 pb-6 lg:flex">
+      <div className="mx-auto w-full max-w-3xl lg:max-w-[1049px]">
         <div className="grid items-start gap-12 lg:grid-cols-2">
           <div className="space-y-4 leading-tight">
             <h2 className="text-2xl font-semibold dark:text-gray-900 md:text-[28px]">
               Always Get The Best, <br />
               With A Single Subscription
             </h2>
-            <p className="text-base text-black/60 dark:text-gray-500 sm:text-lg">
+            <p className="text-base text-black/60 dark:text-gray-500 sm:text-base">
               The best AI model for coding changes by the week, only known to
               insiders managing multiple subscriptions. PearAI Router
               automatically connects you to the highest-performing AI models for
@@ -17,7 +17,7 @@ export default function AIModelsList() {
             </p>
           </div>
 
-          <div className="space-y-3">
+          <div className="space-y-2">
             <div className="relative w-full">
               <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#ddff61] from-0% via-[#7CD5FF] via-50% to-[#FF90E3] to-100% opacity-60" />
               <div className="relative flex items-center gap-3 p-3">

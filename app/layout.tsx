@@ -20,12 +20,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
+    <html
+      lang="en"
+      className={`${GeistSans.variable} ${GeistMono.variable} dark`}
+    >
       <PHProvider>
-        <body className={`bg-background font-sans tracking-tight antialiased`}>
+        <body
+          className={`dark bg-background font-sans tracking-tight antialiased`}
+        >
           <ThemeProvider
             attribute="class"
-            enableSystem
+            defaultTheme="dark"
+            forcedTheme="dark"
+            enableSystem={false}
             disableTransitionOnChange
             enableColorScheme
           >

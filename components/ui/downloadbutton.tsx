@@ -25,7 +25,9 @@ export default function DownloadButton({ user }: { user: User | null }) {
         variant={user ? "outline" : "default"}
         size={`${user ? "icon" : "default"}`}
         className={
-          user ? "h-8 px-3" : "h-8 rounded-xl bg-white-50 px-3 text-black"
+          user
+            ? "h-8 px-3 hover:bg-accent/90 hover:text-accent-foreground"
+            : "h-8 rounded-xl bg-white-50 px-3 text-black transition-colors hover:bg-white-100/80"
         }
         onClick={handleClick}
       >
